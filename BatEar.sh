@@ -19,7 +19,7 @@ my_ip=$(hostname -I | cut -d' ' -f1)
 
 # Check for superuser privileges
 if [ "$EUID" -ne 0 ]; then
-  echo "Este script debe ejecutarse como superusuario (root)." 
+  echo -e "${RED}You will need superuser permissions to execute the script${RESET_COLOR}"
   exit 1
 fi
 
